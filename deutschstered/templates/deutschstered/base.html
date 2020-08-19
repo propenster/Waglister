@@ -1,0 +1,42 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+<meta>
+<title>Deutschstered All Listings around Wageningen </title>
+<link ref="{% static 'deutschstered/vendor/bootstrap/css/bootstrap.min.css' %}">
+<link ref="{% static 'deutschstered/vendor/bootstrap/css/bootstrap.css' %}">
+
+</head>
+<body>
+	<header>
+		<nav>
+			<a class="navbar-brand">Deutschstered</a>
+			<ul class="nav">
+				<li>Home</li>
+				<li>Categories</li>
+				<li>About</li>
+				<li>Blog</li>
+				<li>How it works</li>
+				<li>FAQ's</li>
+			</ul>
+		</nav>
+	</header>
+
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12 col-md-12 col-lg-12 offset-2">
+					{% block content %}
+
+					{% endblock %}
+			</div>
+		</div>
+	</div>
+
+
+<script src="{% static 'deutschstered/vendor/bootstrap/js/bootstrap.js' %}"></script>
+<script src="{% static 'deutschstered/vendor/jquery/jquery.js' %}"></script>
+<script src="{% static 'deutschstered/vendor/js/bootstrap.bundle.js' %}"></script>
+</body>
+</html>
