@@ -5,7 +5,7 @@ from .forms import ItemForm
 
 class HomePageView(ListView):
     model = Item
-    template_name = 'deutschstered/home.html'
+    template_name = 'deutschstered/index.html'
     context_object_name = 'item_list'
 
 
