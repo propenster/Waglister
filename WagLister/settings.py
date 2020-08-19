@@ -26,13 +26,14 @@ SECRET_KEY = 'dt9*yi3pe5z1a-8)!)ems1lh*r!1_9%t(mf3ml1b8&gr5vh^u*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
 
 INSTALLED_APPS = [
     'deutschstered.apps.DeutschsteredConfig',
+    'account',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -77,15 +78,11 @@ WSGI_APPLICATION = 'WagLister.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    },
-    'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'deutschsteredb',
         'HOST': 'localhost',
         'USER': 'root',
-        'PASSWORD': '',
+        'PASSWORD': 'projosh10',
     }
 }
 
@@ -129,10 +126,12 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
-	os.path.join(BASE_DIR, 'static')
+    os.path.join(BASE_DIR, 'static')
 ]
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-REDIRECT_URL = 'home-page' 
+REDIRECT_URL = 'home-page'
+
+AUTH_USER_MODEL = 'account.CustomUser'

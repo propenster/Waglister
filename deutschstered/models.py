@@ -1,6 +1,7 @@
 from django.db import models
 # from django.utils import timezone
-from django.contrib.auth.models import User
+from account.models import CustomUser
+
 
 class Category(models.Model):
     '''
@@ -15,7 +16,8 @@ class Category(models.Model):
         Campus
         Jobs
     '''
-    category_name = models.CharField(max_length=150, help_text='Name of category')
+    category_name = models.CharField(
+        max_length=150, help_text='Name of category')
     category_pub_date = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -54,14 +56,13 @@ class Item(models.Model):
     item_long_description = models.TextField()
     item_price = models.DecimalField(max_digits=6, decimal_places=2)
     item_image = models.FileField(upload_to='gallery/')
-    item_author = models.ForeignKey(User, on_delete=models.CASCADE)
+    item_author = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     item_domain_location = models.CharField(max_length=160, blank=True)
     item_is_active = models.BooleanField(default=False)
     # I want to change fields...
     # item_draft_date = models.DateTimeField(default=timezone.now())
     item_pub_date = models.DateTimeField(auto_now_add=True)
     item_updated_date = models.DateTimeField(auto_now_add=True)
-
 
     class Meta:
         ordering = ['-item_pub_date']
@@ -70,19 +71,6 @@ class Item(models.Model):
     #     self.item_is_active = True
     #     self.item_pub_date = timezone.now
     #     self.save()
-    
+
     def __str__(self):
-        return '{} {} {} {} {} {} {} {} {} {} {}'.format(
-                self.item_title, 
-                self.item_category, 
-                self.item_short_description,
-                self.item_long_description,
-                self.item_price,
-                self.item_image,
-                self.item_author,
-                self.item_domain_location,
-                self.item_is_active,
-                self.item_pub_date,
-                self.item_updated_date)
-
-
+        return '{}'.format(self.item_title)
