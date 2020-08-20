@@ -11,6 +11,7 @@ class Category(models.Model):
         Lodges
         Tutoring
         Giveaways - FREEbies
+        Restaurants
         Location
         Campus
         Jobs
