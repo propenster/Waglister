@@ -1,0 +1,19 @@
+{% extends 'deutschstered/base.html' %}
+
+<section class="wt-haslayout wt-main-section">
+					<div class="container">
+						<div class="row justify-content-md-center">
+                            {% block content %}
+                            <form method="post" enctype="multipart/form-data">
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <button type="submit">Register</button>
+                            </form>
+
+                            <p><a href="{% url 'home-page' %}">Return to home</a></p>
+
+                        </div>
+                    </div>
+
+</section>
+{% endblock %}
