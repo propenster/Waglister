@@ -6,6 +6,11 @@
 <meta>
 <title>Deutschstered All Listings around Wageningen </title>
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+  <link href="{% static 'deutschstered/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'deutschstered/css/blog-home.css' %}" rel="stylesheet">
 
 </head>
 <body>
@@ -24,9 +29,9 @@
 					<span class="sr-only">(current)</span>
 					</a>
 				</li>
-				<li class="nav-item">
+				{% comment %} <li class="nav-item">
 					<a class="nav-link" href="#">Create Post</a>
-				</li>
+				</li> {% endcomment %}
 				<li class="nav-item">
 					<a class="nav-link" href="#">About</a>
 				</li>
@@ -48,8 +53,9 @@
 						<a class="dropdown-item" href="#">Profile</a>
 						
 						<div class="dropdown-divider"></div>
-						<a class="dropdown-item" href="">New User</a>
-						<a class="dropdown-item" href="#">Dashboard</a>
+						<a class="dropdown-item" href="">Create New List</a>
+						<a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a>
+						<a class="dropdown-item" href="#">Settings</a>
 					</div>
 					</li>
 
@@ -68,7 +74,7 @@
 		</nav>
 	</header>
 
-	<main>>
+	<main>
 		
 		{% block content %}
 
@@ -78,6 +84,10 @@
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+  <script src="{% static 'deutschstered/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'deutschstered/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
 
 </body>
 </html>
