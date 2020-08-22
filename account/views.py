@@ -11,7 +11,16 @@ def register(request):
         f = CustomUserCreationForm()
         
     return render(request, 'account/register.html', {'form':f})
+
+
+def user_dashboard(request):
+    template_name = 'account/dashboard_generic_base.html'
+    return render(request, template_name, {})
         
+        
+def user_profile(request):
+    template_name = 'account/profile.html'
+    return render(request, template_name, {})
         
         
         

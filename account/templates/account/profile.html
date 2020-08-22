@@ -1,0 +1,11 @@
+{% extends 'account/dashboard_generic_base.html' %}
+    {% block content %}
+        <h2> This is the Profile Body</h2>
+        <p class="lead">The Main Content Goes Here!</p>     
+        <div class="panel panel-default" id="dashbody">
+           Username : {{ user.username }} <br>
+           Email: {{ user.email }}
+
+        </div>
+
+    {% endblock %}
