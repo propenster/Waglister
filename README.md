@@ -12,5 +12,5 @@ MVP on a tight schedule with suits and batteries of Django....
 <p>More Details soon</p>
 
 ### Collaborators
-propenster - Me
-Josh - github.com/Josh-Ajiniran
+##### propenster - Me
+##### Josh - github.com/Josh-Ajiniran
