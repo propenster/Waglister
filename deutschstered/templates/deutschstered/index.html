@@ -1,68 +1,238 @@
 {% extends 'deutschstered/base.html' %}
 
 {% block content %}
-    
-   
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-12 col-sm-12 col-lg-4 ml-0">
+{% load static %}
+      
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
                     <div class="card">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/post-1.jpg' %}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the 
-                            bulk of the card's content.</p>
+                            <h5 class="card-title">A 2 bedroom student's lodge is for hire around Wag</h5>
+                            <p class="card-text">A spacious, neat 2 bedroom flat is available for let 
+                                around Wageningen, for postgraduate students preferably. With a studio, shared kitchen etc...
+                            </p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item"><a href="#">by Van_Dan_Hourst </a>on March 27, 2018</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <a href="#" class="card-link btn btn-sm btn-primary">Houses and Studios</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 col-lg-4 ml-0">
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
                     <div class="card">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/post-2.jpg' %}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the 
-                            bulk of the card's content.</p>
+                            <h5 class="card-title">I want to give away a Philosophy 3201 textbook to any one interested</h5>
+                            <p class="card-text">
+                                Hi everyone! I'm Hayley Berry from the U.S. I will be concluding my M.S. in Philosophy
+                                programme this fall and would like to give away my Advanced Philology textbook to any deserving
+                                year 2 Masters student...
+                            </p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item"><a href="#">by Hayley_Berry101 </a>on March 27, 2018</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <a href="#" class="card-link btn btn-sm btn-primary">Books</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-12 col-sm-12 col-lg-4 ml-0">
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
                     <div class="card">
-                        <img class="card-img-top" src="..." alt="Card image cap">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/post-3.jpg' %}" alt="Card image cap">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the 
-                            bulk of the card's content.</p>
+                            <h5 class="card-title">I have an opening in my Lap (Dr Spencer Cancer Oncogenetics Lab)</h5>
+                            <p class="card-text">Are you a molecular biology or bioinformatics student who is 
+                            interested in advnacing his career in high throughput cancer genetic analysis...</p>
                         </div>
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
-                            <li class="list-group-item">Dapibus ac facilisis in</li>
-                            <li class="list-group-item">Vestibulum at eros</li>
+                            <li class="list-group-item"><a href="#" class="">by Prof_Xander </a> on March 27, 2018</li>
                         </ul>
                         <div class="card-body">
-                            <a href="#" class="card-link">Card link</a>
-                            <a href="#" class="card-link">Another link</a>
+                            <a href="#" class="card-link btn btn-sm btn-primary">Internsips and Jobs</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
                         </div>
                     </div>
 
+                </div> <!-- clsoe single card column-->
+
+
+                 <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/post-4.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Can anyone guide me through Optometrics 3455</h5>
+                            <p class="card-text">Hi! I'm Virath Priyanda from India. I'm having my M.S. in Applied Physics
+                            at WUR. I'm having some problems grasping Optometrics 3455. Can you help me?
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#">by Virath_Priyanda </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Tutoring</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
                 </div>
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/post-5.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">MS. Sociology and Rural Dev Field Trip</h5>
+                            <p class="card-text">
+                                Hi everyone! The 2021 Class of M.S. Sociology and Rural Development is going on a field trip
+                                to the sub-saharan Africa region of Congo. Anyone interested?  
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#">by Leeta_Mays </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Adventures</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/post-6.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Advnaced GIS and Geolocation Training for Biological Scientists</h5>
+                            <p class="card-text">Are you a molecular biology or bioinformatics student who is 
+                            interested in using GIS for mapping and demography studies in his/her research project...</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#" class="">by Leemao </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Tutoring</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
+
+                </div> <!-- clsoe single card column-->
+
+
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/image_6.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Can anyone guide me through Optometrics 3455</h5>
+                            <p class="card-text">Hi! I'm Virath Priyanda from India. I'm having my M.S. in Applied Physics
+                            at WUR. I'm having some problems grasping Optometrics 3455. Can you help me?
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#">by Virath_Priyanda </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Tutoring</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/image_2.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">MS. Sociology and Rural Dev Field Trip</h5>
+                            <p class="card-text">
+                                Hi everyone! The 2021 Class of M.S. Sociology and Rural Development is going on a field trip
+                                to the sub-saharan Africa region of Congo. Anyone interested?  
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#">by Leeta_Mays </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Adventures</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/image_5.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Advnaced GIS and Geolocation Training for Biological Scientists</h5>
+                            <p class="card-text">Are you a molecular biology or bioinformatics student who is 
+                            interested in using GIS for mapping and demography studies in his/her research project...</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#" class="">by Leemao </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Tutoring</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
+
+                </div> <!-- clsoe single card column-->
+
+
+                
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/choose-2.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Can anyone guide me through Optometrics 3455</h5>
+                            <p class="card-text">Hi! I'm Virath Priyanda from India. I'm having my M.S. in Applied Physics
+                            at WUR. I'm having some problems grasping Optometrics 3455. Can you help me?
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#">by Virath_Priyanda </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Tutoring</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/gallery-2.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">MS. Sociology and Rural Dev Field Trip</h5>
+                            <p class="card-text">
+                                Hi everyone! The 2021 Class of M.S. Sociology and Rural Development is going on a field trip
+                                to the sub-saharan Africa region of Congo. Anyone interested?  
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#">by Leeta_Mays </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Adventures</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-12 col-lg-4 ml-0 mb-2">
+                    <div class="card">
+                        <img class="card-img-top" src="{% static 'deutschstered/images/image_3.jpg' %}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">Advnaced GIS and Geolocation Training for Biological Scientists</h5>
+                            <p class="card-text">Are you a molecular biology or bioinformatics student who is 
+                            interested in using GIS for mapping and demography studies in his/her research project...</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><a href="#" class="">by Leemao </a>on March 27, 2018</li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link btn btn-sm btn-primary">Tutoring</a>
+                            <a href="#" class="card-link"><a href="#" class="btn btn-sm btn-success">Contact Lister</a>
+                        </div>
+                    </div>
+
+                </div> <!-- clsoe single card column-->
 
             </div> <!-- close row -->
         </div>
