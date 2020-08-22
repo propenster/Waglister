@@ -1,0 +1,121 @@
+{% load static %}
+
+<!doctype html>
+<html>
+<head>
+<meta>
+<title>Deutschstered All Listings around Wageningen </title>
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<!-- Bootstrap core CSS -->
+  <link href="{% static 'deutschstered/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'deutschstered/css/blog-home.css' %}" rel="stylesheet">
+
+</head>
+<body>
+	<header>
+		<!-- Navigation -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-info">
+			<div class="container-fluid">
+			<a class="navbar-brand" href="#"><img src="{% static 'deutschstered/logo.png' %}"></a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarResponsive">
+				<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">Home
+					<span class="sr-only">(current)</span>
+					</a>
+				</li>
+				{% comment %} <li class="nav-item">
+					<a class="nav-link" href="#">Create Post</a>
+				</li> {% endcomment %}
+				<li class="nav-item">
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Services</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+				{% comment %} <li class="nav-item">
+					<a class="nav-link" href="{% url 'logout' %}">Logout</a>
+				</li> {% endcomment %}
+				{% if user.is_authenticated %}
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ user.username }}</a>
+
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="{% url 'logout' %}">Logout</a>
+						<a class="dropdown-item" href="#">Profile</a>
+						
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="">Create New List</a>
+						<a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a>
+						<a class="dropdown-item" href="#">Settings</a>
+					</div>
+					</li>
+
+					{% else %}
+				
+					<li class="nav-item">
+					<a class="nav-link" href="{% url 'login' %}">Login</a>
+					</li>
+					<li class="nav-item">
+					<a class="nav-link" href="{% url 'register' %}">Register</a>
+					</li>
+				{% endif %}
+				</ul>
+			</div>
+			</div>
+		</nav>
+	</header>
+
+	<main>
+        <section class="wt-haslayout wt-main-section">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 mt-2 py-2">
+                        <div class="panel panel-default">
+                        {% if request.user.is_authenticated %}
+                            <h4 class="panel-header">Welcome {{ user.email }}</h4>{% endif %}
+                            <a class="navbar-brand" href="{% url 'dashboard' %}">Dashboard</a>
+                            <div class="panel-body">
+                                <ul class="nav-links">
+                                    <li class="nav-item"><a href="{% url 'create-item' %}">Create a New Post</a></li> 
+                                    <li class="nav-item"><a href="{% url 'profile' %}">My Profile</a></li> 
+                                    <li class="nav-item"><i class="fas fa-book"></i><a href="#">View All Posts</a></li> 
+                                    <li class="nav-item"><a href="#">Message Requests</a></li> 
+                                    <hr class="divider my-2">
+                                    <li class="nav-item"><a href="#">Change Settings and Preferences</a></li> 
+                                    <li class="nav-item"><a href="#">Visit Blog</a></li> 
+                                    <li class="nav-item"><a href="#">Create a New Post</a></li> 
+                                </ul>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 mt-1 py-2">
+                        {% block content %}
+                        
+                        {% endblock %}
+                    </div>                    
+                </div>
+            </div>
+                        
+        </section>
+    </main>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+<!-- Bootstrap core JavaScript -->
+  <script src="{% static 'deutschstered/vendor/jquery/jquery.min.js' %}"></script>
+  <script src="{% static 'deutschstered/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+</body>
+</html>

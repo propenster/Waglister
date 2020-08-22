@@ -1,42 +1,11 @@
-{% extends 'deutschstered/base.html' %}
+{% extends 'account/dashboard_generic_base.html' %}
+    {% block content %}
+        <h2> This is the Profile Body</h2>
+        <p class="lead">The Main Content Goes Here!</p>     
+        <div class="panel panel-default" id="dashbody">
+           Username : {{ user.username }} <br>
+           Email: {{ user.email }}
 
-{% block content %}
-
-<section class="wt-haslayout wt-main-section">
-	<div class="container-fluid">
-		<div class="row">
-            <div class="col-lg-3 mt-2 py-2">
-                <div class="panel panel-default">
-                {% if request.user.is_authenticated %}
-                    <h4 class="panel-header">Welcome {{ user.email }}</h4>{% endif %}
-                    <div class="panel-body">
-                        <ul class="nav-links">
-                            <li class="nav-item"><a href="#">Create a New Post</a></li> 
-                            <li class="nav-item"><a href="{% url 'profile' %}">My Profile</a></li> 
-                            <li class="nav-item"><i class="fas fa-book"></i><a href="#">View All Posts</a></li> 
-                            <li class="nav-item"><a href="#">Message Requests</a></li> 
-                            <hr class="divider my-2">
-                            <li class="nav-item"><a href="#">Change Settings and Preferences</a></li> 
-                            <li class="nav-item"><a href="#">Visit Blog</a></li> 
-                            <li class="nav-item"><a href="#">Create a New Post</a></li> 
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-            <div class="col-lg-6 mt-1 py-2">
-                <h2> This is the Profile Body</h2>
-                <p class="lead">The Main Content Goes Here!</p>
-                <div class="panel panel-default" id="dashbody">
-
-                    Username : {{ user.username }} <br>
-                    Email: {{ user.email }}
-
-                </div>
-
-            </div>                    
         </div>
-    </div>
-				
-</section>
-{% endblock %}
+
+    {% endblock %}

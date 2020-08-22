@@ -14,7 +14,7 @@ def register(request):
 
 
 def user_dashboard(request):
-    template_name = 'account/dashboard.html'
+    template_name = 'account/dashboard_generic_base.html'
     return render(request, template_name, {})
         
         
