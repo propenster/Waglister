@@ -23,6 +23,11 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('deutschstered.urls')),
+    
+]
+
+urlpatterns += [
+    path('accounts/', include('account.urls')),
 ]
 
 if settings.DEBUG:
