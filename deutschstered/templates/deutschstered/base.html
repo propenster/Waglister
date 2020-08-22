@@ -9,16 +9,19 @@
 <!-- Bootstrap core CSS -->
   <link href="{% static 'deutschstered/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="{% static 'deutschstered/css/blog-home.css' %}" rel="stylesheet">
+	<!-- Font Awesome Icon -->
+	<link rel="stylesheet" href="{% static 'deutschstered/css/font-awesome.min.css' %}" rel="stylesheet">
+
+	<!-- Custom styles for this template -->
+	<link href="{% static 'deutschstered/css/custom.css' %}" rel="stylesheet">
 
 </head>
 <body>
 	<header>
 		<!-- Navigation -->
 		<nav class="navbar navbar-expand-lg navbar-light bg-info">
-			<div class="container-fluid">
-			<a class="navbar-brand" href="#"><img src="{% static 'deutschstered/logo.png' %}"></a>
+			<div class="container">
+			<a class="navbar-brand" href="{% url 'home-page' %}"><img src="{% static 'deutschstered/logo.png' %}"></a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
 				<span class="navbar-toggler-icon"></span>
 			</button>
@@ -65,7 +68,7 @@
 					<a class="nav-link" href="{% url 'login' %}">Login</a>
 					</li>
 					<li class="nav-item">
-					<a class="nav-link" href="{% url 'register' %}">Register</a>
+					<a class="nav-link btn btn-success text-light" href="{% url 'register' %}">Start Listing</a>
 					</li>
 				{% endif %}
 				</ul>
@@ -82,12 +85,96 @@
 	</main>
 
 
+	<!-- Footer -->
+		<footer id="footer" class="footer bg-dark">
+			<!-- container -->
+			<div class="container">
+				<!-- row -->
+				<div class="row">
+					<div class="col-md-5">
+						<div class="footer-widget">
+							<div class="footer-logo">
+								<a href="index.html" class="logo"><img src="./img/logo.png" alt=""></a>
+							</div>
+							<ul class="footer-nav">
+								<li><a href="#">Privacy Policy</a></li>
+								<li><a href="#">Advertisement</a></li>
+							</ul>
+							<div class="footer-copyright">
+								<span>&copy; <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="footer-widget">
+									<h3 class="footer-title"><a href="#" class="text-light">About Us</a></h3>
+									<ul class="footer-links">
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="#">Join Us</a></li>
+										<li><a href="contact.html">Contacts</a></li>
+										<li class="nav-item">
+											<a class="nav-link btn btn-success text-light" href="{% url 'register' %}">Start Listing</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="footer-widget">
+									<h3 class="footer-title"><a href="#" class="text-light">Categories</a></h3>
+									<ul class="footer-links">
+										<li><a href="category.html">Houses and Studios</a></li>
+										<li><a href="category.html">Wageningen</a></li>
+										<li><a href="category.html">Books</a></li>
+										<li><a href="category.html">Tutoring</a></li>
+										<li><a href="category.html">Restaurants</a></li>
+										<li><a href="category.html">Jobs</a></li>
+										<li><a href="category.html">Freebies</a></li>
+										<li><a href="category.html">Adventures, Travels and Expeditions</a></li>
+										<li><a href="category.html">Assitantship</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-3">
+						<div class="footer-widget">
+							<h3 class="footer-title "><a href="#" class="text-light">Join our Newsletter</a></h3>
+							<div class="footer-newsletter">
+								<form>
+									<input class="input" type="email" name="newsletter" placeholder="Enter your email">
+									<button class="newsletter-btn"><i class="fa fa-paper-plane"></i></button>
+								</form>
+							</div>
+							<ul class="footer-social">
+								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+								
+							</ul>
+						</div>
+					</div>
+
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</footer>
+		<!-- /Footer -->
+
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
 
 <!-- Bootstrap core JavaScript -->
   <script src="{% static 'deutschstered/vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'deutschstered/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
 
 </body>
 </html>
