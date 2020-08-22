@@ -21,6 +21,20 @@
    font-weight: bold;
  }
 
+ #blog-section{
+   margin: 0;
+   padding: 0 5px;
+   text-align: center;
+  border: 1px solid grey;
+  box-sizing: border-box;
+  line-height: 1vh;
+ }
+
+ #blog-section h3{
+   font-size: 400;
+   
+ }
+
 
 
 
