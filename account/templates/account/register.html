@@ -1,12 +1,14 @@
 {% extends 'deutschstered/base.html' %}
 
+{% load crispy_forms_tags %}
+
 <section class="wt-haslayout wt-main-section">
 					<div class="container">
 						<div class="row justify-content-md-center">
                             {% block content %}
                             <form method="post" class="form mt-4 px-2 py-2" enctype="multipart/form-data">
                                 {% csrf_token %}
-                                {{ form.as_p }}
+                                {{ form|crispy }}
                                 <button type="submit" class="btn btn-primary">Register</button>
                             </form>
 
